@@ -1,0 +1,39 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="democrud:war exploded">
+    <output-path>$PROJECT_DIR$/target/democrud</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>true</exploded>
+        <module>democrud</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="democrud" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: org.postgresql:postgresql:42.2.5" />
+          <element id="library" level="project" name="Maven: org.microprofile-ext.openapi-ext:swagger-ui:1.0.2" />
+          <element id="library" level="project" name="Maven: org.webjars:swagger-ui:3.20.5" />
+          <element id="library" level="project" name="Maven: org.webjars.bower:swagger-ui-themes:3.0.0" />
+          <element id="library" level="project" name="Maven: org.apache.deltaspike.modules:deltaspike-data-module-api:1.9.0" />
+          <element id="library" level="project" name="Maven: org.apache.deltaspike.core:deltaspike-core-api:1.9.0" />
+          <element id="library" level="project" name="Maven: org.apache.deltaspike.modules:deltaspike-partial-bean-module-api:1.9.0" />
+          <element id="library" level="project" name="Maven: org.apache.deltaspike.modules:deltaspike-jpa-module-api:1.9.0" />
+          <element id="library" level="project" name="Maven: org.apache.deltaspike.modules:deltaspike-data-module-impl:1.9.0" />
+          <element id="library" level="project" name="Maven: org.apache.deltaspike.core:deltaspike-core-impl:1.9.0" />
+          <element id="library" level="project" name="Maven: org.apache.deltaspike.modules:deltaspike-partial-bean-module-impl:1.9.0" />
+          <element id="library" level="project" name="Maven: org.apache.deltaspike.modules:deltaspike-proxy-module-api:1.9.0" />
+          <element id="library" level="project" name="Maven: org.apache.deltaspike.modules:deltaspike-proxy-module-impl-asm:1.9.0" />
+          <element id="library" level="project" name="Maven: org.apache.deltaspike.modules:deltaspike-jpa-module-impl:1.9.0" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/target/democrud/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="democrud/web/Web" />
+    </root>
+  </artifact>
+</component>
