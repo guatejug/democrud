@@ -1,6 +1,5 @@
-package com.sherwin.controller;
+package com.guatejug.controller;
 
-import javax.enterprise.context.RequestScoped;
 import javax.inject.Singleton;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;

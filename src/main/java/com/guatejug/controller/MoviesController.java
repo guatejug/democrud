@@ -1,18 +1,19 @@
-package com.sherwin.controller;
+package com.guatejug.controller;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.Random;
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
-import javax.ws.rs.core.MediaType;
 import org.eclipse.microprofile.faulttolerance.Fallback;
 import org.eclipse.microprofile.faulttolerance.Timeout;
 import org.eclipse.microprofile.metrics.MetricUnits;
 import org.eclipse.microprofile.metrics.annotation.Counted;
 import org.eclipse.microprofile.metrics.annotation.Gauge;
 import org.eclipse.microprofile.metrics.annotation.Timed;
+
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Random;
 
 
 @Path("/movies")
@@ -27,9 +28,7 @@ public class MoviesController {
             unit = MetricUnits.SECONDS ,
             absolute = true)
     public List<String> findMovies() throws Exception{
-        Random r = new Random();
-        Thread.sleep(r.nextInt(5000));
-        
+        String foo =null; System.out.println(foo.toString());
         return Arrays.asList("Black panther",
                 "Avengers Endgame",
                 "Spiderman far from home");

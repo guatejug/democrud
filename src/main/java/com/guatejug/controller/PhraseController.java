@@ -1,27 +1,19 @@
 
-package com.sherwin.controller;
+package com.guatejug.controller;
 
-import com.sherwin.dto.PhraseDTO;
-import com.sherwin.model.Phrase;
-import com.sherwin.repository.PhraseRepository;
-import java.util.List;
+import com.guatejug.dto.PhraseDTO;
+import com.guatejug.model.Phrase;
+import com.guatejug.repository.PhraseRepository;
+import org.eclipse.microprofile.openapi.annotations.Operation;
+import org.eclipse.microprofile.openapi.annotations.responses.APIResponse;
+
 import javax.inject.Inject;
 import javax.validation.Valid;
-import javax.ws.rs.Consumes;
-import javax.ws.rs.DELETE;
-import javax.ws.rs.DefaultValue;
-import javax.ws.rs.GET;
-import javax.ws.rs.POST;
-import javax.ws.rs.PUT;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
-import javax.ws.rs.Produces;
-import javax.ws.rs.QueryParam;
+import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.UriBuilder;
-import org.eclipse.microprofile.openapi.annotations.Operation;
-import org.eclipse.microprofile.openapi.annotations.responses.APIResponse;
+import java.util.List;
 
 
 @Path("/phrases")
@@ -34,7 +26,7 @@ public class PhraseController {
     
     @GET
     @Operation(description = "Busca todas las frases celebres de Sherwin")
-    @APIResponse(description = "Un listado de frases desde PostgreSQL")
+    @APIResponse(description = "A phrase list from PostgresSQL")
     public List<PhraseDTO> listAll(
             @QueryParam("author") @DefaultValue("%") String author,
             @QueryParam("phrase") @DefaultValue("%") String phrase

@@ -6,7 +6,6 @@
 
     <persistence-unit name="demo-PU" transaction-type="JTA">
         <description>Universal JTA datasource</description>
-        <jta-data-source>java:app/jdbc/sherwindb</jta-data-source>
         <properties>
             <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
             <property name="eclipselink.logging.level.sql" value="FINE"/>

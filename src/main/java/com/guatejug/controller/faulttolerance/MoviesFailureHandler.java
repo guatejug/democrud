@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.sherwin.controller.faulttolerance;
+package com.guatejug.controller.faulttolerance;
 
 import java.util.Arrays;
 import java.util.List;

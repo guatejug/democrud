@@ -3,13 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.sherwin.repository;
+package com.guatejug.repository;
 
-import com.sherwin.dto.PhraseDTO;
-import com.sherwin.model.Phrase;
+import com.guatejug.dto.PhraseDTO;
+import com.guatejug.model.Phrase;
 import java.util.List;
-import javax.inject.Inject;
-import javax.persistence.EntityManager;
+
 import org.apache.deltaspike.data.api.AbstractEntityRepository;
 import org.apache.deltaspike.data.api.Query;
 import org.apache.deltaspike.data.api.Repository;
@@ -35,7 +34,7 @@ public abstract class PhraseRepository extends AbstractEntityRepository<Phrase, 
     
     public List<PhraseDTO> fasterFind(String author, String phrase){
         String queryjpql = 
-            "SELECT NEW com.sherwin.dto.PhraseDTO(p.author) "
+            "SELECT NEW com.guatejug.dto.PhraseDTO(p.author) "
                 + "FROM Phrase AS p "
                 + "WHERE p.author LIKE :author and p.phrase LIKE :phrase";
         

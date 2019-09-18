@@ -1,5 +1,5 @@
 
-package com.sherwin.dto;
+package com.guatejug.dto;
 
 
 public class PhraseDTO {
