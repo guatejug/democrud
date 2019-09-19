@@ -1,7 +1,6 @@
 
 package com.guatejug.controller;
 
-import com.guatejug.dto.PhraseDTO;
 import com.guatejug.model.Phrase;
 import com.guatejug.repository.PhraseRepository;
 import org.eclipse.microprofile.openapi.annotations.Operation;
@@ -27,11 +26,11 @@ public class PhraseController {
     @GET
     @Operation(description = "Busca todas las frases celebres de Sherwin")
     @APIResponse(description = "A phrase list from PostgresSQL")
-    public List<PhraseDTO> listAll(
+    public List<Phrase> listAll(
             @QueryParam("author") @DefaultValue("%") String author,
             @QueryParam("phrase") @DefaultValue("%") String phrase
     ){
-        return phraseRepository.fasterFind("%"+author+"%",
+        return phraseRepository.superFind("%"+author+"%",
                 "%"+phrase+"%");
     }
     

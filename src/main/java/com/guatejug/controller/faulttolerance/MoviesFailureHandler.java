@@ -19,9 +19,8 @@ public class MoviesFailureHandler
 
     @Override
     public List handle(ExecutionContext context) {
-        return Arrays.asList("Dulce noviembre",
+        return Arrays.asList("Sweet november",
                 "Rambo I",
-                "Los verduleros I",
-                "Los verduleros II: La venganza");
+                "The new adventures of duke");
     }
 }

@@ -14,7 +14,6 @@
           <element id="module-output" name="democrud" />
         </element>
         <element id="directory" name="lib">
-          <element id="library" level="project" name="Maven: org.postgresql:postgresql:42.2.5" />
           <element id="library" level="project" name="Maven: org.microprofile-ext.openapi-ext:swagger-ui:1.0.2" />
           <element id="library" level="project" name="Maven: org.webjars:swagger-ui:3.20.5" />
           <element id="library" level="project" name="Maven: org.webjars.bower:swagger-ui-themes:3.0.0" />

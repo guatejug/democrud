@@ -24,7 +24,7 @@ public class MoviesController {
     @Timeout(1000)
     @Fallback(fallbackMethod = "findFallbackMovies")
     @Timed(name = "moviesDelay",
-            description = "Tiempo de respuesta",
+            description = "Response time",
             unit = MetricUnits.SECONDS ,
             absolute = true)
     public List<String> findMovies() throws Exception{
@@ -37,12 +37,6 @@ public class MoviesController {
     @Counted(description = "badMovies")
     public List<String> findFallbackMovies(){
         return Arrays.asList("Superman","Batman vs. Superman", "Justice League");
-    }
-    
-    @Gauge(unit = "BuenosChistes",name = "chistesDePeliculas", absolute = true)
-    public long getDatabases () {
-         Random r = new Random();
-        return r.nextInt(5000); //Any value
     }
     
 }

@@ -5,7 +5,6 @@
  */
 package com.guatejug.repository;
 
-import com.guatejug.dto.PhraseDTO;
 import com.guatejug.model.Phrase;
 import java.util.List;
 
@@ -16,34 +15,8 @@ import org.apache.deltaspike.data.api.Repository;
 @Repository
 public abstract class PhraseRepository extends AbstractEntityRepository<Phrase, Long> {
 
-    
-    public abstract List<Phrase> findByAuthorLikeAndPhraseLike(String author, String phrase);
-    
     @Query("SELECT p FROM Phrase p WHERE p.author LIKE ?1 and p.phrase LIKE ?2")
     public abstract List<Phrase> superFind(String author, String phrase);
-    
-    public List<Phrase> customFind(String author, String phrase){
-        String queryjpql = "SELECT p FROM Phrase p "
-                + "WHERE p.author LIKE :author and p.phrase LIKE :phrase";
-        
-        return this.typedQuery(queryjpql)
-                .setParameter("author", author)
-                .setParameter("phrase", phrase)
-                .getResultList();
-    }
-    
-    public List<PhraseDTO> fasterFind(String author, String phrase){
-        String queryjpql = 
-            "SELECT NEW com.guatejug.dto.PhraseDTO(p.author) "
-                + "FROM Phrase AS p "
-                + "WHERE p.author LIKE :author and p.phrase LIKE :phrase";
-        
-        javax.persistence.Query query 
-                = this.entityManager().createQuery(queryjpql)
-                    .setParameter("author", author)
-                    .setParameter("phrase", phrase);
-        
-        return query.getResultList();
-    }
+
     
 }
