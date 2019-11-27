@@ -73,7 +73,7 @@
               <configuration>
                   <images>
                       <image>
-                          <name>iad.ocir.io/tuxtor/microprofile/democrud</name>
+                          <name>tuxtor/democrud</name>
                           <build>
                               <dockerFile>${project.basedir}/Dockerfile</dockerFile >
                           </build>

@@ -26,7 +26,7 @@ public class HelloController {
     public String sayHello() throws Exception{
         
         if(++count % 15 != 0){
-            System.out.println("Falling down");
+            System.out.println("Falling down " + count);
             throw new Exception();
         }
         

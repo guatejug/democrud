@@ -28,7 +28,9 @@ public class MoviesController {
             unit = MetricUnits.SECONDS ,
             absolute = true)
     public List<String> findMovies() throws Exception{
-        String foo =null; System.out.println(foo.toString());
+        String foo =null;
+        System.out.println(foo.toString());
+
         return Arrays.asList("Black panther",
                 "Avengers Endgame",
                 "Spiderman far from home");
